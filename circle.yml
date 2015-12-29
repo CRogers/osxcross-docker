@@ -2,6 +2,10 @@ machine:
   services:
     - docker
 
+general:
+  artifacts:
+    - osxcross-dist.tar.xz
+
 test:
   override:
     - ./build.sh
