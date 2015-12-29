@@ -1,5 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eu
 
-INSTALLPREFIX=/cross ./build_clang.sh
+export UNATTENDED=1
+
+echo Using $JOBS jobs
+
+./build.sh
+./build_clang.sh
+./build_gcc.sh
