@@ -7,7 +7,7 @@ RELEASE_NAME=$1
 GITHUB_RELEASE_TARBALL=linux-amd64-github-release.tar.bz2
 
 wget https://github.com/aktau/github-release/releases/download/v0.6.2/$GITHUB_RELEASE_TARBALL
-tar xzf $GITHUB_RELEASE_TARBALL
+tar xjf $GITHUB_RELEASE_TARBALL
 rm $GITHUB_RELEASE_TARBALL
 mv bin/linux/amd64/github-release bin/
 chmod +x bin/github-release

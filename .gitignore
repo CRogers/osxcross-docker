@@ -1,3 +1,4 @@
 bin/
 out/
 osxcross-dist.tar.xz
+*.log
