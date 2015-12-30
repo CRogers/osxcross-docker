@@ -13,4 +13,4 @@ mv bin/linux/amd64/github-release bin/
 chmod +x bin/github-release
 
 ./bin/github-release release -t $RELEASE_NAME
-./bin/github-release upload -t $RELEASE_NAME -n "osxcross-$RELEASE_NAME.tar.xz" -f osxcross-dist.tar.xz
+./bin/github-release upload -t $RELEASE_NAME -n "osxcross-$RELEASE_NAME.tar.xz" -f dist/osxcross-dist.tar.xz

@@ -5,5 +5,4 @@ if [[ -z "$JOBS" ]]; then
 fi
 
 docker build -t osxcross-docker docker-build
-docker run -it -e "JOBS=$JOBS" -v "$(pwd)/out:/osxcross/target" osxcross-docker /osxcross/build-everything.sh \
-  | tee build-log.log
+docker run -it -e "JOBS=$JOBS" -v "$(pwd)/dist:/osxcross/dist" osxcross-docker /osxcross/build-everything.sh

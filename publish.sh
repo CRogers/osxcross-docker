@@ -2,7 +2,10 @@
 
 set -e
 
-if [[ "$(git tag --contains HEAD)" != "" ]]; then
+if [[ -n "$(git tag --contains HEAD)" ]]; then
+  echo Skipping release, no tags
+else
   TAG=$(git describe --tags)
+  echo Releasing as $TAG
   ./deploy-github.sh $TAG
 fi

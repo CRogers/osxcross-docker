@@ -1,4 +1,4 @@
 bin/
-out/
-osxcross-dist.tar.xz
+dist/
 *.log
+.DS_Store
