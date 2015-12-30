@@ -5,6 +5,7 @@ machine:
 general:
   artifacts:
     - osxcross-dist.tar.xz
+    - build-log.log
 
 test:
   override:
