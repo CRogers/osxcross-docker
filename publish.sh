@@ -5,7 +5,7 @@ set -e
 TAGS="$(git tag --contains HEAD)"
 echo "Tags: $TAGS"
 
-if [[ -n "$TAGS" ]]; then
+if [[ -z "$TAGS" ]]; then
   echo Skipping release, no tags
 else
   TAG=$(git describe --tags)
