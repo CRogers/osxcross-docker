@@ -11,5 +11,11 @@ RUN ./tools/get_dependencies.sh
 
 RUN wget -P tarballs/ https://github.com/CRogers/osxcross-docker/releases/download/osx-sdk/MacOSX10.9.sdk.tar.xz
 
+RUN adduser --disabled-password --gecos "" osxcross
+
 ADD build-everything.sh /osxcross/
 RUN chmod +x build-everything.sh
+
+RUN chown -R osxcross .
+
+USER osxcross
