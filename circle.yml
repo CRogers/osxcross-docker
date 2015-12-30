@@ -7,6 +7,12 @@ general:
     - osxcross-dist.tar.xz
     - build-log.log
 
+checkout:
+  post:
+    - for tag in $(git tag); do git tag -d $tag; done
+    - git fetch --tags origin
+    - echo "Tags $(git tag --contains HEAD)"
+
 test:
   override:
     - ./build.sh
