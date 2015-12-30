@@ -1,9 +1,9 @@
 #!/bin/bash
 
-set -e
+set -eu
 
-if [[ "$(git tag --contains HEAD)" != "" ]]; then
-  TAG=$(git describe)
-  ./create-archive.sh
-  ./deploy-github.sh $TAG
-fi
+RELEASE=$1
+
+git commit --allow-empty -m "$RELEASE release"
+git tag -a $RELEASE -m $RELEASE
+git push origin master $RELEASE
