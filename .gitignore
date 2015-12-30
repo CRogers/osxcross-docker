@@ -1,2 +1,3 @@
+bin/
 out/
-docker-build/tarballs/*
+osxcross-dist.tar.xz
