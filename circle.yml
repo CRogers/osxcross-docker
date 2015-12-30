@@ -9,4 +9,5 @@ general:
 test:
   override:
     - ./build.sh
+    - ./create-archive.sh
     - ./publish.sh
